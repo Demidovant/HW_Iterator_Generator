@@ -8,6 +8,15 @@ def flat_generator(list_of_lists):
         list_of_lists = list_of_lists[1::]  # Удаляем список с индексом 0 из списка списков
 
 
+# Либо такая реализация функции flat_generator
+
+# def flat_generator(list_of_lists):
+#     list_of_lists = list_of_lists[::-1] # Разворачиваем список, чтобы в дальнейшем использовать pop
+#     while list_of_lists:  # Пока список списков не пуст
+#         for elem in list_of_lists.pop():  # Перебираем элементы списка с индексом -1 одновременно удаляя этот список из списка списков
+#             yield elem
+
+
 def test_2():
     list_of_lists_1 = [
         ['a', 'b', 'c'],
